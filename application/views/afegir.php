@@ -53,6 +53,17 @@
   </div>
 </div>
 
+<!-- Multiple Checkboxes (inline) -->
+<div class="control-group">
+  <label class="control-label" for="checkboxes">Inline Checkboxes</label>
+  <div class="controls">
+    <label class="checkbox inline" for="checkboxes-0">
+      <input name="checkboxes" id="checkboxes-0" value="1234" type="checkbox">
+      1234
+    </label>
+  </div>
+</div>
+
 <!-- File Button 
 <div class="control-group">
   <label class="control-label" for="foto">Imatge</label>

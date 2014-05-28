@@ -77,6 +77,7 @@ class Productes extends CI_Controller {
 					$url = $fullname;
 					$url = urls_amigables($url);
 					$this->mod_productes->insertProducte($fullname, $price, $categoria, $descripcio, $url);
+					// si notificacions esta a false aixo de aqui no ho te que fer..
 		$msg="Ara pots demanar el nou producte :$fullname a la Cafeteria Da Vinci per un preu de : $price €!!";
 		$pb->Alert($msg);
 		$platforms= array(0,1);
