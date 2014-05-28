@@ -3,20 +3,21 @@
 	<head>
 		<title>Agregar productes</title>
 		<?php include("capçalera.php"); ?>
+		
 	</head>
 	<body>
 
 <form class="form-horizontal" method="post">
-<fieldset>
+
 
 <!-- Form Name -->
-<legend><h1>Inserta un nou producte</h1></legend>
+<legend><h1>Pas 1 : Inserta les dades</h1></legend>
 
 <!-- Text input-->
 <div class="control-group">
   <label class="control-label" for="fullname">Nom del producte</label>
   <div class="controls">
-    <input id="fullname" name="fullname" placeholder="Ex : napolitana" class="input-xlarge" required="" type="text">
+    <input id="fullname" name="fullname" placeholder="Ex : napolitana" required="" class="input-xlarge">
     
   </div>
 </div>
@@ -25,7 +26,7 @@
 <div class="control-group">
   <label class="control-label" for="descripcio">Descripció</label>
   <div class="controls">                     
-    <textarea id="descripcio" name="descripcio" required=""></textarea>
+    <textarea id="descripcio" name="descripcio" required="" class="input-xlarge"></textarea>
   </div>
 </div>
 
@@ -33,10 +34,12 @@
 <div class="control-group">
   <label class="control-label" for="price">Preu</label>
   <div class="controls">
-	<input type="number" id="price" name="price" placeholder="Ex : 5.5" required="">
-   
+	<input id="price" name="price" placeholder="Ex : 5.5" required=""  min=1 class="input-xlarge">
+	<span class="alert alert-warning">Compte, només numeros</span>
   </div>
 </div>
+
+
 
 <!-- Select Basic -->
 <div class="control-group">
@@ -67,7 +70,6 @@
   </div>
 </div>
 
-</fieldset>
 </form>
 
 </body>

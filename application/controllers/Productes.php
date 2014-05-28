@@ -73,7 +73,7 @@ class Productes extends CI_Controller {
                 $categoria = $this->input->post('categoria');
                 $descripcio = $this->input->post('descripcio');
                 //$count = $users->count;
-                if($fullname != null && $descripcio != null &&$price != null ){
+                if($fullname != null && $descripcio != null &&$price != null &&$price >0 ){
 					$url = $fullname;
 					$url = urls_amigables($url);
 					$this->mod_productes->insertProducte($fullname, $price, $categoria, $descripcio, $url);

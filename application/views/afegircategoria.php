@@ -4,8 +4,18 @@
 		<title>Agregar productes</title>
 		<?php include("capçalera.php"); ?>
 	</head>
-	<body>
+<body>
+			<style>
+				
+body {
+	background-image:url("../../imatges/fondo.jpg");
+}
+form
+{
+	margin-left: 30%;
+}
 
+</style>
 <form class="form-horizontal" method="post">
 <fieldset>
 
@@ -16,7 +26,7 @@
 <div class="control-group">
   <label class="control-label" for="name">Nom de la categoria</label>
   <div class="controls">
-    <input id="name" name="name" placeholder="Ex : Cerveses" class="input-xlarge" required="" type="text">
+    <input id="name" name="name" placeholder="Ex : Cerveses" class="input-xlarge" required="">
     
   </div>
 </div>
