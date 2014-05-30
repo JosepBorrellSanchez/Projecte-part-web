@@ -23,12 +23,12 @@ new FixedColumns( oTable );
 });
 </script>
 
-			<!-- DataTables-->
-			<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.js"></script>
+<!-- DataTables-->
+			<script type="text/javascript" charset="utf-8" src="<?php echo base_url('assets/media/js/DataTables.js')?>"></script>
 <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
 
 <!-- jQuery -->
-<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url('assets/media/js/DataTables.min.js')?>"></script>
 
 <!--Table Tools-->
 <script type="text/javascript" charset="utf-8" src="<?php echo base_url('assets/media/js/ZeroClipboard.js')?>"></script>
