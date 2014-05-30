@@ -20,6 +20,27 @@ Class User extends CI_Model
      return false;
    }
  }
+ function canviarpassword($username, $password, $passwordnova)
+ {
+	$this -> db -> select('ID, user_login, user_pass');
+	$this -> db -> from('wp_users');
+	$this -> db -> where('user_login', $username);
+	$this -> db -> where('user_pass', MD5($password));
+	$this -> db -> limit(1);
+	$query = $this -> db -> get();
+
+   if($query -> num_rows() == 1)
+   {
+	   $data = array(
+        'user_pass'=> MD5($passwordnova));
+	$this -> db -> update('wp_users', $data);
+	$this -> db -> from('wp_users');
+	$this -> db -> where('user_login', $username);
+	$this -> db -> where('user_pass', MD5($password));
+	 
+ 
+}
+}
 }
 
 

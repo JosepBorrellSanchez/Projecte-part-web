@@ -3,7 +3,12 @@
 	<head>
 		<title>Agregar productes</title>
 		<?php include("capçalera.php"); ?>
-		
+		<style>
+				form
+				{
+					margin-left: 30%;
+					}
+		</style>
 	</head>
 	<body>
 
@@ -55,11 +60,11 @@
 
 <!-- Multiple Checkboxes (inline) -->
 <div class="control-group">
-  <label class="control-label" for="checkboxes">Inline Checkboxes</label>
+  <label class="control-label" for="checkboxes">Notificar el producte?</label>
   <div class="controls">
-    <label class="checkbox inline" for="checkboxes-0">
-      <input name="checkboxes" id="checkboxes-0" value="1234" type="checkbox">
-      1234
+    <label class="checkbox inline" for="notificar">
+      <input name="notificar" id="notificar" value="1" type="checkbox">
+      
     </label>
   </div>
 </div>

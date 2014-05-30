@@ -50,6 +50,7 @@ class Productes extends CI_Controller {
 		$appSecret = 'a79871c9cafd06607bf95fc2fc8700fa';
 		$pb->App($appID, $appSecret);
 		if($this->session->userdata('logged_in')){	
+			
 		function urls_amigables($url) {
 			// Tranformamos todo a minusculas
 			$url = strtolower($url);
@@ -72,18 +73,20 @@ class Productes extends CI_Controller {
                 $price = $this->input->post('price');
                 $categoria = $this->input->post('categoria');
                 $descripcio = $this->input->post('descripcio');
+                $notificar = $this->input->post('notificar');
                 //$count = $users->count;
                 if($fullname != null && $descripcio != null &&$price != null &&$price >0 ){
 					$url = $fullname;
 					$url = urls_amigables($url);
 					$this->mod_productes->insertProducte($fullname, $price, $categoria, $descripcio, $url);
 					// si notificacions esta a false aixo de aqui no ho te que fer..
-		$msg="Ara pots demanar el nou producte :$fullname a la Cafeteria Da Vinci per un preu de : $price €!!";
-		$pb->Alert($msg);
-		$platforms= array(0,1);
-		$pb->Platform($platforms);
-		// Push it !
-		$pb->Push();
+					if($notificar == 1){
+						$msg="Ara pots demanar el nou producte :$fullname a la Cafeteria Da Vinci per un preu de : $price €!!";
+						$pb->Alert($msg);
+						$platforms= array(0,1);
+						$pb->Platform($platforms);
+						// Push it !
+						$pb->Push();}
 					$idproducte = $this->db->insert_id();
 					redirect('Productes/upload', $idproducte);
                 }

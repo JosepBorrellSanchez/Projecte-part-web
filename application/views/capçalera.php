@@ -2,6 +2,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Bootstrap -->
 		<link href="/gestio/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<style>			
+	body {
+		background-color:#E9E9E9;
+		}
+		
+</style>
 		
 				<script src="http://code.jquery.com/jquery.js"></script>
 		<div class="navbar">
@@ -20,6 +26,7 @@
 							<li><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
+							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break; ?>
 						
@@ -30,6 +37,7 @@
 							<li><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
+							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break; ?>
     
@@ -40,6 +48,7 @@
 							<li class="active"><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
+							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break; ?>
 						
@@ -50,6 +59,7 @@
 							<li class="active"><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
+							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break; ?>
 						
@@ -60,6 +70,7 @@
 							<li><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li class="active"><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
+							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break; ?>
 						
@@ -70,6 +81,7 @@
 							<li><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li class="active"><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
+							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break; ?>
 						<?
@@ -79,6 +91,7 @@
 							<li><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
+							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break;
 						default : ?>
@@ -87,6 +100,7 @@
 							<li><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
+							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 							<?} ?>
 				</ul> <?} 
@@ -171,5 +185,6 @@
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 							<?} ?>
 				</ul> <?} ?>
+				
 			</div>
 		</div>

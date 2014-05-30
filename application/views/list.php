@@ -60,6 +60,16 @@ new FixedColumns( oTable );
 
 
 
+    <script language="Javascript"> 
+    function confirmar(){ 
+    confirmar=confirm("¿Segur que vols borrarlo?"); 
+    if (confirmar) 
+    return true;
+    else 
+    return false;
+    </script>
+
+
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 
 	 <script type="text/javascript" charset="utf-8">
@@ -67,7 +77,7 @@ new FixedColumns( oTable );
 			$('#25').dataTable();
 		} );
 	</script>
-	
+
 
 	</head>
 	<body>
@@ -87,6 +97,7 @@ new FixedColumns( oTable );
 		</tr>
 		</thead>
 		<tbody>
+			
  <?php foreach($query->result() as $index) {?> 
 			<td> <?php echo $index -> term_id; ?></td>
 			<td> <?php echo $index -> name; ?></td>
@@ -95,7 +106,8 @@ new FixedColumns( oTable );
 			<td> <a href='http://josepborrellweb.esy.es/wordpress/product-category/<?php echo $index -> slug; ?>'>Link a la categoria</td>
 			<td>
 				<a href='modificar/<?php echo $index->term_id;?>'><button class="btn btn-primary" type="button">Modificar</button></a>
-				<a href='borrar/<?php echo $index->term_id; ?>'><button class="btn btn-danger" type="button">Eliminar</button></a></td>
+				
+				<a href='borrar/<?php echo $index->term_id; ?>'onclick="return confirm('Confirmació. Segur que vols eliminar la categoria?');"><button class="btn btn-danger" type="button">Eliminar</button></a></td>
 			<?php echo "</tr>"; } ?> 
 			
 		</tbody>

@@ -1,15 +1,12 @@
 <html>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<head>
-		<title>Agregar productes</title>
+		<title>Agregar categoria</title>
 		<?php include("capçalera.php"); ?>
 	</head>
 <body>
 			<style>
 				
-body {
-	background-image:url("../../imatges/fondo.jpg");
-}
 form
 {
 	margin-left: 30%;

@@ -9,7 +9,7 @@
 <script type="text/javascript">
 	$(document).ready( function () {
 		var oTable = $('#25').dataTable( {
-					"sScrollY": "300px",
+					"sScrollY": "500px",
 					"sScrollX": "100%",
 					"sScrollXInner": "100%",
 					"bScrollCollapse": true,
@@ -69,6 +69,7 @@ new FixedColumns( oTable );
 	</script>
 	
 
+
 	</head>
 	<body>
 		<p>Aquesta es la taula de productes</p>
@@ -89,11 +90,11 @@ new FixedColumns( oTable );
 		<td> <?php echo $index -> ID; ?></td>
 		<td> <?php echo $index -> nom; ?></td>
 		<td> <?php echo $index -> descripcio; ?></td>
-		<td> <?php echo $index -> preu; ?></td>
+		<td> <?php echo $index -> preu; ?> €</td>
 		<td> <a href='http://josepborrellweb.esy.es/wordpress/products/<?php echo $index -> link; ?>'>Link al producte</td>
 		<td>
 			<a href='modificar/<?php echo $index->ID;?>'><button class="btn btn-primary" type="button">Modificar</button></a>
-			<a href='borrar/<?php echo $index->ID; ?>'><button class="btn btn-danger" type="button">Eliminar</button></a></td>
+			<a href='borrar/<?php echo $index->ID; ?>' onclick="return confirm('Confirmació. Segur que vols eliminar el producte?');"><button class="btn btn-danger" type="button">Eliminar</button></a></td>
 		<?php echo "</tr>"; } ?>
 		</tbody>
 	</table>
