@@ -26,7 +26,6 @@
 							<li><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
-							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break; ?>
 						
@@ -37,7 +36,6 @@
 							<li><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
-							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break; ?>
     
@@ -48,7 +46,6 @@
 							<li class="active"><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
-							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break; ?>
 						
@@ -59,7 +56,6 @@
 							<li class="active"><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
-							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break; ?>
 						
@@ -70,7 +66,6 @@
 							<li><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li class="active"><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
-							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break; ?>
 						
@@ -81,7 +76,6 @@
 							<li><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li class="active"><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
-							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break; ?>
 						<?
@@ -91,7 +85,6 @@
 							<li><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
-							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 						<? break;
 						default : ?>
@@ -100,7 +93,6 @@
 							<li><a href="/gestio/index.php/Productes/llistar">Veure productes</a></li>
 							<li><a href="/gestio/index.php/Categories/crear">Insertar una categoria</a></li>
 							<li><a href="/gestio/index.php/Categories/llistar">Veure categories</a></li>
-							<li><a href="/gestio/index.php/Configuracio/canviarpassword">Canviar password</a></li>
 							<li><a href="/gestio/index.php/home/logout">Sortir</a></li>
 							<?} ?>
 				</ul> <?} 

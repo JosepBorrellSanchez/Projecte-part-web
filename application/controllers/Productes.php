@@ -120,7 +120,7 @@ class Productes extends CI_Controller {
 			'encrypt_name' => false,
 			'remove_spaces' => true, );
 		$this->upload->initialize($config_file);
-		if (!$this->upload->do_upload('cipote')) {
+		if (!$this->upload->do_upload('fotoproducte')) {
 			$error = $this->upload->display_errors();
 			echo $error; 
 		} 
