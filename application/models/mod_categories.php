@@ -10,6 +10,7 @@ class mod_Categories extends CI_Model{
     }
     
     function getProducte(){
+		//inutil, no l'utilitzo.
 		
 		$query=$this->db->get('wp_posts');
 		
@@ -17,6 +18,7 @@ class mod_Categories extends CI_Model{
 	}
 	
 	function getCategoria(){
+		//Busca a la base de dades totes les categories i les retorna
 		/*
 		$this->db->select('*')
 		$this->db->from('wp_terms AS A');
@@ -41,6 +43,7 @@ $this->db->select('*');
 	}
 	
 	function getCategories(){
+		//Similar al getCategoria, l’unic que canvia es el resultat de com ho retorna
 		$this->db->select('*');
 		$this->db->from('wp_terms AS A');
 		$this->db->join('wp_term_taxonomy AS B', 'A.term_id = B.term_id');
@@ -74,6 +77,7 @@ LIMIT 0 , 30
 	
 	
 	function insertCategoria($name, $url, $descripcio){
+		//Agafa els valors que li passa el controlador i els inserta a la BD
 		//inserto la categoria (wp-terms)
         $data = array(
         'name'=> $name,
@@ -92,6 +96,7 @@ LIMIT 0 , 30
 	
 	
 	function borrar($ID)
+	//Agafa el valor ID del controlador i borra la categoria amb aquest ID 
     {
        $this->db->delete('wp_terms', array('term_id' => $ID));
        $this->db->select('term_taxonomy_id');
@@ -104,6 +109,7 @@ LIMIT 0 , 30
      
     }
     function modificar($term_id, $name, $url, $descripcio)
+    //Modifica la categoria que li indica el controlador
     {
 		
 		$data = array('name' => $name,

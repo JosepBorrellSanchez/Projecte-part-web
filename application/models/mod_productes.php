@@ -12,6 +12,7 @@ class mod_productes extends CI_Model{
     }
     
     function getProducte(){
+		//recupero els productes
 		
 		/*
 		 * SELECT a.ID, a.post_title AS nom, b.meta_value AS descripcio, c.meta_value AS preu, a.post_name AS link
@@ -42,6 +43,7 @@ LIMIT 0 , 30
 	}
 	
 	function getProductejson(){
+		//similar a getProducte, però ho retorno de manera diferent
 		
 		$this->db->select('a.ID');
 		$this->db->select('a.post_title as nom');
@@ -102,7 +104,8 @@ ORDER BY  `a`.`ID` ASC
 LIMIT 0 , 30*/
 	}
 	
-	function getProductejsoncat($categoria){		
+	function getProductejsoncat($categoria){	
+		//obtinc els productes només de la categoria que li passa el controlador	
 		$this->db->select('a.ID');
 		$this->db->select('a.post_title as nom');
 		$this->db->select('b.meta_value as descripcio');
@@ -128,6 +131,7 @@ LIMIT 0 , 30*/
 	}
 	
 	function getUltimProducte(){
+		//recupero l'ultim producte de la base de dades, es a dir l'ultim insertat
 		
 		$this->db->select('a.ID');
 		$this->db->from('wp_posts AS a');
@@ -145,7 +149,7 @@ LIMIT 0 , 30*/
 	}
 		
 	function insertProducte($fullname, $price, $categoria, $descripcio, $url){
-		
+		//recupero els valors dels camps del formuladi i els inserto a la BD, posteriorment inserto a les taules relacionades els camps que pertoquen
 		//array del producte (inserto producte)
         $data = array(
         'post_title'=> $fullname,
@@ -200,6 +204,7 @@ LIMIT 0 , 30*/
 	}
 	
 	function pujarFoto($nom, $file_name, $idproducte) {
+		//agafo els valors de la foto que s’ha pujat, i inserto a la base de dades. 
 		 $data = array('post_title'=> $nom,
 		  'post_name'=> $nom,
 		  'post_content'=>$file_name,
@@ -220,14 +225,12 @@ LIMIT 0 , 30*/
 		  'meta_key'=>'_thumbnail_id',
 		  'meta_value'=> $idguarda);
 		   $this->db->insert('wp_postmeta', $data);
-		   
-		   
-		   
 		   }
 	
 	
 	
 	function borrar($ID)
+	//borra el producte que li passa el controlador
     {
        $this->db->delete('wp_posts', array('ID' => $ID));
        $this->db->delete('wp_postmeta', array('post_id' => $ID));
@@ -256,6 +259,7 @@ LIMIT 0 , 30*/
     }
     
     function modificar($ID, $fullname, $price, $categoria, $descripcio, $url)
+    //modifico el producte que li passa el controlador
     {
 				
 		//array del producte (modifico producte)

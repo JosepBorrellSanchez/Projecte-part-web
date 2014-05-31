@@ -1,6 +1,7 @@
 <?php
 Class User extends CI_Model
 {
+	//fa la funció de login per comprovar que es correcte
  function login($username, $password)
  {
    $this -> db -> select('ID, user_login, user_pass');

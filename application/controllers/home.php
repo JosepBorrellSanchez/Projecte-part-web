@@ -8,6 +8,7 @@ class Home extends CI_Controller {
  }
 
  function index()
+ // La funció per defecte, que mira si estas loguejat, si ho estas t’envia a la pàgina principal, sinó t’envia a la pàgina del login.
  {
    if($this->session->userdata('logged_in'))
    {
@@ -23,6 +24,7 @@ class Home extends CI_Controller {
  }
 
  function logout()
+ //es carrega la sessió.
  {
    $this->session->unset_userdata('logged_in');
    session_destroy();

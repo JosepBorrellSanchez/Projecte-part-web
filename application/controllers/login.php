@@ -8,6 +8,7 @@ class Login extends CI_Controller {
  }
 
  function index()
+ //Carrega la vista del login.
  {
    $this->load->helper(array('form'));
    $this->load->view('login_view');

@@ -9,6 +9,7 @@ class VerifyLogin extends CI_Controller {
  }
 
  function index()
+ //Carrega la vista i estableix normes per als camps usuari i contrasenya.
  {
    //This method will have the credentials validation
    $this->load->library('form_validation');
@@ -30,6 +31,7 @@ class VerifyLogin extends CI_Controller {
  }
 
  function check_database($password)
+ //comprova si els registres insertats al formulari son correctes.
  {
    //Field validation succeeded.&nbsp; Validate against database
    $username = $this->input->post('username');

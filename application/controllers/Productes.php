@@ -13,6 +13,7 @@ class Productes extends CI_Controller {
 // fer un vector i recorrel en lo for each, ha de portar 
 // l'objecte persona 
 	public function llistar()
+	//crida el model de productes i els recupera tots per mostrarlos a una vista.
 	{	
 		if($this->session->userdata('logged_in')){
 
@@ -29,6 +30,7 @@ class Productes extends CI_Controller {
 	}
 	
 	public function listcategories()
+	//Recupera les categories per poder triar a l'hora d'insertar un producte
 	{
 		if($this->session->userdata('logged_in')){	
 		$users ['query'] = $this->mod_categories->getCategoria();
@@ -41,6 +43,7 @@ class Productes extends CI_Controller {
 	
 
 	public function crear()
+	//Agafa el contingut del formulari i l’envia al model per fer la operació d’insertar
 	{
 		$this->load->library('PushBots');
 		$pb = new PushBots();
@@ -100,6 +103,7 @@ class Productes extends CI_Controller {
  }
 
 	public function upload() {
+		// carrega la vista de penjar la foto
 		if($this->session->userdata('logged_in')){
 			$data['content'] = 'penjafoto';
 			$this->load->vars($data);
@@ -110,6 +114,7 @@ class Productes extends CI_Controller {
 	}
 
 	public function DoUpload() {
+		//es el que s’encarrega de fer la feina de pujar la foto, si s’ha pujat correctament reenvia a la llista.
 		if($this->session->userdata('logged_in')){
 		$config_file = array ( 'upload_path' => './../wordpress/wp-content/uploads/2014/05',
 			'allowed_types' => 'png|jpg',
@@ -141,6 +146,7 @@ class Productes extends CI_Controller {
 
 			
 	public function modificar($ID)
+	//Obté el producte que es vol modificar i envia les dades del formulari al model per a que aquest pugui fer la operació de modificar.
 	{
 		if($this->session->userdata('logged_in')){
 		function urls_amigables($url) {
@@ -178,6 +184,7 @@ class Productes extends CI_Controller {
      redirect('login', 'refresh');}
 }
 	public function borrar($ID)
+	//Mira quin producte hem dit de borrar i carrega el model passantli l’ID del producte per a que l’elimine
 	{
 		if($this->session->userdata('logged_in')){
                 $this->mod_productes->borrar($ID);
@@ -189,6 +196,7 @@ class Productes extends CI_Controller {
 	}
 
 function json()
+//recupera els productes  des del model i carrega una vista amb el json
     {
         $data['json'] = $this->mod_productes->getProductejson();
         if (!$data['json']) show_404();
@@ -196,6 +204,7 @@ function json()
     }
     
 function jsoncat($categoria)
+//recupera totes els productes de segons quina categoria i els carrega a una vista.
     {
 		//$categoria = 2;
         $data['json'] = $this->mod_productes->getProductejsoncat($categoria);

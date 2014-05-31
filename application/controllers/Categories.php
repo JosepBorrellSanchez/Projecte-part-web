@@ -7,20 +7,21 @@ class Categories extends CI_Controller {
         $this->load->model('mod_categories');
         $this->load->helper('url');
     }
-// fer un vector i recorrel en lo for each, ha de portar 
-// l'objecte persona 
 	public function llistar()
+	//crida el model de categories i les recupera totes per mostrarles a una vista
 	{	
 			if($this->session->userdata('logged_in')){
-		$users ['query'] = $this->mod_categories->getCategoria();
-		$this->load->view('list', $users);}
-		else{
-     //If no session, redirect to login page
-     redirect('login', 'refresh');}
+				$users ['query'] = $this->mod_categories->getCategoria();
+				$this->load->view('list', $users);}
+			else{
+				//If no session, redirect to login page
+				redirect('login', 'refresh');}
 	}
 
 	public function crear()
 	{
+		//Agafa el contingut del formulari i l’envia al model per fer la operació d’insertar.
+		
 		if($this->session->userdata('logged_in')){
 		function urls_amigables($url) {
 			// Tranformamos todo a minusculas
@@ -55,6 +56,7 @@ class Categories extends CI_Controller {
 }
 
 	function json()
+	//recupera les categories des del model i carrega una vista amb el json.
     {
         $data['json'] = $this->mod_categories->getCategoriesjson();
         if (!$data['json']) show_404();
@@ -62,6 +64,7 @@ class Categories extends CI_Controller {
     }
     
 	public function modificar($term_id)
+	//Obté la categoria que es vol modificar i envia les dades del formulari al model per a que aquest pugui fer la operació de modificar.
 	{
 		function urls_amigables($url) {
 			// Tranformamos todo a minusculas
@@ -91,6 +94,7 @@ class Categories extends CI_Controller {
                 redirect('Categories/llistar');}
 }
 	public function borrar($ID)
+	//Mira quina categoria hem dit de borrar i carrega el model passantli l’ID de la categoria per a que l’elimine
 	{
 		if($this->session->userdata('logged_in')){
                 $this->mod_categories->borrar($ID);
@@ -103,6 +107,3 @@ class Categories extends CI_Controller {
 
 }
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
