@@ -183,7 +183,6 @@ LIMIT 0 , 30*/
 		$this->db->join('wp_term_taxonomy AS B', 'A.term_id = B.term_id');
 		$this->db->where('B.taxonomy = "al_product-cat"');
 		$query = $this->db->get()->result();
-		echo $query;
 		//fer un array en los ID de categoria per a despues recorrel i actualitzar los counts..
 		foreach ($query as $categoria) {
 			$this->db->select('count(*)');
@@ -241,7 +240,6 @@ LIMIT 0 , 30*/
 		$this->db->join('wp_term_taxonomy AS B', 'A.term_id = B.term_id');
 		$this->db->where('B.taxonomy = "al_product-cat"');
 		$query = $this->db->get()->result();
-		echo $query;
 		//fer un array en los ID de categoria per a despues recorrel i actualitzar los counts..
 		foreach ($query as $categoria) {
 			$this->db->select('count(*)');

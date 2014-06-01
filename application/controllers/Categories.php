@@ -49,7 +49,9 @@ class Categories extends CI_Controller {
                 $descripcio = $this->input->post('descripcio');
                 $url = urls_amigables($url);
                 if($name != null)
-                $this->mod_categories->insertCategoria($name, $url, $descripcio);}
+                $this->mod_categories->insertCategoria($name, $url, $descripcio);
+                redirect('Categories/llistar'); 
+                }
                 else{
      //If no session, redirect to login page
      redirect('login', 'refresh');}
